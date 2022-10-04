@@ -10,4 +10,5 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
 
 COPY ./000-default.conf /etc/apache2/sites-available/000-default.conf
 WORKDIR /var/www/html
+RUN usermod -u 1000 www-data
 EXPOSE 80
